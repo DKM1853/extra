@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Product Detail - Rockworx</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style>
+      /* Fix 1: Main product image covers the square fully */
+      #product-img-wrap {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+      #product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Fix 2: Related carousel — all images same fixed height */
+      #related-carousel .vesitable-img {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+      }
+      #related-carousel .vesitable-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar start -->
+    <div class="container-fluid fixed-top">
+      <div class="container topbar d-none d-lg-block">
+        <div class="d-flex justify-content-between">
+          <div class="top-info ps-2">
+            <small class="me-3">
+              <i class="fas fa-map-marker-alt me-2 text-secondary"></i>
+              <a
+                href="https://maps.app.goo.gl/jSsfCeEApox5uDgH6"
+                target="_blank"
+                class="text-white"
+              >
+                Plot no 15,16, Harmada Rd, Rajasthan 305801
+              </a>
+            </small>
+            <small class="me-3">
+              <i class="fas fa-envelope me-2 text-secondary"></i>
+              <a href="#" class="text-white">Email@Example.com</a>
+            </small>
+          </div>
+          <div class="top-link pe-2">
+            <a
+              href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+              target="_blank"
+              class="text-white"
+            >
+              <small class="text-white mx-2"
+                >Bulk Order Direct Whatsapp: 12345678890</small
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+          <a href="index.html" class="navbar-brand">
+            <h2 class="mb-0 fw-bold" style="color: #2e2e2e">Rockworx</h2>
+          </a>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link px-3">Home</a>
+              <a href="about.html" class="nav-item nav-link px-3">About Us</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle active"
+                  data-bs-toggle="dropdown"
+                  >Products</a
+                >
+                <div class="dropdown-menu rounded-0 shadow-sm">
+                  <a href="granite.html" class="dropdown-item">Granite</a>
+                  <a href="pebbles.html" class="dropdown-item">Pebbles</a>
+                  <a href="cobblestones.html" class="dropdown-item"
+                    >Cobblestones</a
+                  >
+                  <a href="handicraft.html" class="dropdown-item">Handicraft</a>
+                </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link px-3"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Single Product Start -->
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row g-4 mb-5">
+          <div class="col-lg-8 col-xl-9">
+            <div class="row g-4">
+              <!-- Product Image — fixed square cover -->
+              <div class="col-lg-6">
+                <div class="border rounded" id="product-img-wrap">
+                  <a href="#" id="product-img-link">
+                    <img id="product-img" src="" alt="" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- Product Info -->
+              <div class="col-lg-6">
+                <h4 class="fw-bold mb-3" id="product-name">Loading…</h4>
+                <p class="mb-3">
+                  Category: <span id="product-category"></span>
+                </p>
+
+                <!-- Price (first price key only shown here) -->
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <h5 class="fw-bold mb-0" id="product-price"></h5>
+                </div>
+                <small
+                  class="text-muted d-block mb-3"
+                  id="product-price-unit"
+                ></small>
+
+                <!-- Stars -->
+                <div class="d-flex mb-4" id="product-stars"></div>
+
+                <!-- Short description -->
+                <p class="mb-4" id="product-short-desc"></p>
+
+                <!-- Long description -->
+                <p class="mb-4" id="product-long-desc"></p>
+
+                <!-- Action Buttons -->
+                <div class="d-flex gap-2 flex-wrap mb-4">
+                  <a
+                    href="#"
+                    id="btn-enquire"
+                    class="rw-btn-gold-outline rounded-pill px-4 py-2 text-primary"
+                  >
+                    <i class="fa fa-phone me-2 text-primary"></i> Enquire Now
+                  </a>
+                  <a
+                    href="#"
+                    id="btn-whatsapp"
+                    target="_blank"
+                    class="rw-btn-gold-outline rounded-pill px-4 py-2 text-primary"
+                  >
+                    <i class="fab fa-whatsapp me-2 text-primary"></i> Get Quote
+                  </a>
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div class="col-lg-12">
+                <nav>
+                  <div class="nav nav-tabs mb-3">
+                    <button
+                      class="nav-link active border-white border-bottom-0"
+                      type="button"
+                      role="tab"
+                      id="nav-about-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-about"
+                      aria-controls="nav-about"
+                      aria-selected="true"
+                    >
+                      Description
+                    </button>
+                    <button
+                      class="nav-link border-white border-bottom-0"
+                      type="button"
+                      role="tab"
+                      id="nav-mission-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-mission"
+                      aria-controls="nav-mission"
+                      aria-selected="false"
+                    >
+                      Reviews (<span id="review-count">0</span>)
+                    </button>
+                  </div>
+                </nav>
+
+                <div class="tab-content mb-5">
+                  <!-- Description Tab -->
+                  <div
+                    class="tab-pane active"
+                    id="nav-about"
+                    role="tabpanel"
+                    aria-labelledby="nav-about-tab"
+                  >
+                    <p id="tab-long-desc"></p>
+                    <div class="px-2">
+                      <div class="row g-4">
+                        <div class="col-6">
+                          <!-- Static rows -->
+                          <div
+                            class="row bg-light align-items-center text-center justify-content-center py-2"
+                          >
+                            <div class="col-6">
+                              <p class="mb-0">Category</p>
+                            </div>
+                            <div class="col-6">
+                              <p class="mb-0" id="desc-category"></p>
+                            </div>
+                          </div>
+
+                          <!-- Dynamic price rows injected here -->
+                          <div id="desc-price-rows"></div>
+
+                          <div
+                            class="row bg-light text-center align-items-center justify-content-center py-2"
+                          >
+                            <div class="col-6"><p class="mb-0">Quality</p></div>
+                            <div class="col-6">
+                              <p class="mb-0">Premium Natural</p>
+                            </div>
+                          </div>
+                          <div
+                            class="row text-center align-items-center justify-content-center py-2"
+                          >
+                            <div class="col-6"><p class="mb-0">Origin</p></div>
+                            <div class="col-6"><p class="mb-0">India</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Reviews Tab -->
+                  <div
+                    class="tab-pane"
+                    id="nav-mission"
+                    role="tabpanel"
+                    aria-labelledby="nav-mission-tab"
+                  >
+                    <div id="reviews-container"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- /Tabs -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <h1 class="fw-bold mb-0">Related Products</h1>
+        <div class="vesitable">
+          <div
+            class="owl-carousel vegetable-carousel justify-content-center"
+            id="related-carousel"
+          >
+            <!-- injected by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Single Product End -->
+
+    <!-- CTA Section -->
+    <div class="container-fluid rw-bg-cta py-5">
+      <div class="container text-center py-4">
+        <h2 class="rw-text-white rw-title mb-3">
+          Let's Build Something Timeless
+        </h2>
+        <p class="rw-text-light mb-4" style="max-width: 700px; margin: auto">
+          From luxury residences to large-scale commercial projects, Rockworx
+          delivers precision-crafted natural stone solutions tailored to your
+          architectural vision.
+        </p>
+        <a
+          href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+          target="_blank"
+          class="btn rw-btn-gold-outline rounded-pill px-5 py-3"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid rw-footer pt-5">
+      <div class="container py-5">
+        <div
+          class="row align-items-center pb-4 mb-4 border-bottom"
+          style="border-color: rgba(198, 167, 94, 0.3) !important"
+        >
+          <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+            <h2 class="rw-text-gold mb-1">Rockworx</h2>
+            <p class="rw-text-light mb-0">Premium Natural Stone Solutions</p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <div class="d-inline-flex gap-3">
+              <a
+                class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
+                href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
+                href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
+                href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-outline-secondary btn-md-square rounded-circle"
+                href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="row g-5">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="rw-text-white mb-3">About Rockworx</h5>
+            <p class="rw-text-light">
+              We deliver premium granite, marble, and sandstone with precision
+              fabrication, strict quality standards, and reliable international
+              supply.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="rw-text-white mb-3">Quick Links</h5>
+            <div class="d-flex flex-column gap-2">
+              <a href="about.html" class="rw-footer-link">About Us</a>
+              <a href="contact.html" class="rw-footer-link">Contact</a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12">
+            <h5 class="rw-text-white mb-3">Contact Info</h5>
+            <p class="rw-text-light mb-1">
+              Plot no 15,16, Harmada Rd, Rajasthan 305801
+            </p>
+            <p class="rw-text-light mb-1">info@rockworx.com</p>
+            <p class="rw-text-light">+91 12345 67890</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container-fluid rw-bg-deep py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start rw-text-light">
+            © 2026 Rockworx. All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end rw-text-light">
+            Designed & Developed by Rockworx Team
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="rw-back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Products Data -->
+    <script src="js/products-data.js"></script>
+
+    <!-- ── Product Detail Logic ── -->
+    <script>
+      (function () {
+        /* ── Helpers ──────────────────────────────────────────────── */
+
+        function getParam(name) {
+          return new URLSearchParams(window.location.search).get(name);
+        }
+
+        /**
+         * Returns ALL non-empty price entries as an array of { label, value }
+         * Skips any key whose value is null, undefined, 0, or empty string.
+         */
+        function parsePriceEntries(priceObj) {
+          var unitMap = {
+            per_sqft: "Per Sq.Ft",
+            piece: "Per Piece",
+            "1kg": "Per 1 Kg",
+            "500g": "Per 500g",
+            per_ton: "Per Ton",
+          };
+          var result = [];
+          Object.entries(priceObj).forEach(function (entry) {
+            var key = entry[0];
+            var val = entry[1];
+            // Skip if empty / null / 0
+            if (val === null || val === undefined || val === "" || val === 0)
+              return;
+            result.push({
+              label: key,
+              value: val,
+            });
+          });
+          return result;
+        }
+
+        /** First price entry — used in the header price display */
+        function parseFirstPrice(priceObj) {
+          var entries = parsePriceEntries(priceObj);
+          return entries.length ? entries[0] : { label: "", value: 0 };
+        }
+
+        function starsHTML(rating) {
+          var html = "";
+          for (var i = 1; i <= 5; i++) {
+            html +=
+              '<i class="fa fa-star' +
+              (i <= rating ? " text-secondary" : "") +
+              '"></i>';
+          }
+          return html;
+        }
+
+        function avgRating(reviews) {
+          if (!reviews || !reviews.length) return 0;
+          return Math.round(
+            reviews.reduce(function (s, r) {
+              return s + r.rating;
+            }, 0) / reviews.length,
+          );
+        }
+
+        function catLabel(cat) {
+          var map = {
+            granite: "Granite",
+            pebbles: "Pebbles",
+            cobblestones: "Cobblestones",
+            handicraft: "Handicraft",
+          };
+          return map[cat] || cat;
+        }
+
+        /* ── Similar Products ─────────────────────────────────────── */
+
+        function getSimilarProducts(all, current, limit) {
+          limit = limit || 6;
+          var same = all.filter(function (p) {
+            return p.id !== current.id && p.category === current.category;
+          });
+          var other = all.filter(function (p) {
+            return p.id !== current.id && p.category !== current.category;
+          });
+          function shuffle(arr) {
+            var a = arr.slice();
+            for (var i = a.length - 1; i > 0; i--) {
+              var j = Math.floor(Math.random() * (i + 1));
+              var t = a[i];
+              a[i] = a[j];
+              a[j] = t;
+            }
+            return a;
+          }
+          if (same.length >= limit) return same.slice(0, limit);
+          return same.concat(shuffle(other).slice(0, limit - same.length));
+        }
+
+        /* ── HTML Builders ────────────────────────────────────────── */
+
+        function reviewCardHTML(r) {
+          return (
+            '<div class="d-flex">' +
+            '<img src="img/avatar.jpg" class="img-fluid rounded-circle p-3" style="width:100px;height:100px;" alt="" />' +
+            '<div class="">' +
+            '<p class="mb-2" style="font-size:14px;">Verified Buyer</p>' +
+            '<div class="d-flex justify-content-between">' +
+            "<h5>" +
+            r.name +
+            "</h5>" +
+            '<div class="d-flex mb-3">' +
+            starsHTML(r.rating) +
+            "</div>" +
+            "</div>" +
+            '<p class="text-dark">' +
+            r.comment +
+            "</p>" +
+            "</div>" +
+            "</div>"
+          );
+        }
+
+        /**
+         * Related card — image div has fixed height via CSS so all cards are uniform.
+         * The CSS rule in <style> handles the sizing; no inline styles needed here.
+         */
+        function relatedCardHTML(p) {
+          var firstPrice = parseFirstPrice(p.price);
+          var link = "product.html?product=" + encodeURIComponent(p.id);
+          return (
+            '<div class="border border-primary rounded position-relative vesitable-item">' +
+            '<div class="vesitable-img">' +
+            '<img src="' +
+            p.image_url +
+            '" alt="' +
+            p.name +
+            '" ' +
+            'onerror="this.src=\'img/placeholder.jpg\'" loading="lazy" />' +
+            "</div>" +
+            '<div class="product-title px-3 py-1 rounded position-absolute" style="top:10px;right:10px;">' +
+            catLabel(p.category) +
+            "</div>" +
+            '<div class="p-4 pb-0 rounded-bottom">' +
+            "<h4>" +
+            p.name +
+            "</h4>" +
+            "<p>" +
+            p.short_description +
+            "</p>" +
+            '<div class="d-flex justify-content-between flex-lg-wrap">' +
+            '<p class="text-dark fs-5 fw-bold">₹' +
+            firstPrice.value +
+            ' <small class="fs-6 text-muted">' +
+            firstPrice.label +
+            "</small></p>" +
+            '<a href="' +
+            link +
+            '" class="rw-btn-gold-outline rounded-pill px-3 py-1 mb-4 text-primary">' +
+            '<i class="fa fa-eye me-2 text-primary"></i> View' +
+            "</a>" +
+            "</div>" +
+            "</div>" +
+            "</div>"
+          );
+        }
+
+        /* ── Render ───────────────────────────────────────────────── */
+
+        function render(product, all) {
+          var priceEntries = parsePriceEntries(product.price);
+          var firstPrice = priceEntries.length
+            ? priceEntries[0]
+            : { label: "", value: "" };
+          var avg = avgRating(product.reviews);
+          var similar = getSimilarProducts(all, product, 6);
+
+          // Page title
+          document.title = product.name + " | Rockworx";
+
+          // Image — object-fit:cover applied via CSS
+          var img = document.getElementById("product-img");
+          img.src = product.image_url;
+          img.alt = product.name;
+          img.onerror = function () {
+            this.src = "img/placeholder.jpg";
+          };
+          document.getElementById("product-img-link").href = product.image_url;
+
+          // Name / category
+          document.getElementById("product-name").textContent = product.name;
+          document.getElementById("product-category").textContent = catLabel(
+            product.category,
+          );
+
+          // First price shown in header
+          document.getElementById("product-price").textContent =
+            firstPrice.value ? "₹" + firstPrice.value : "";
+          document.getElementById("product-price-unit").textContent =
+            firstPrice.label;
+
+          // Stars
+          document.getElementById("product-stars").innerHTML = starsHTML(avg);
+
+          // Descriptions
+          document.getElementById("product-short-desc").textContent =
+            product.short_description;
+          document.getElementById("product-long-desc").textContent =
+            product.long_description;
+          document.getElementById("tab-long-desc").textContent =
+            product.long_description;
+
+          // Description table — static category row
+          document.getElementById("desc-category").textContent = catLabel(
+            product.category,
+          );
+
+          // Dynamic price rows — one row per non-empty price key, alternating bg
+          var priceRowsHTML = "";
+          priceEntries.forEach(function (entry, idx) {
+            var bg = idx % 2 === 0 ? "" : "bg-light"; // alternate shade
+            priceRowsHTML +=
+              '<div class="row ' +
+              bg +
+              ' text-center align-items-center justify-content-center py-2">' +
+              '<div class="col-6"><p class="mb-0">' +
+              entry.label +
+              "</p></div>" +
+              '<div class="col-6"><p class="mb-0">₹' +
+              entry.value +
+              "</p></div>" +
+              "</div>";
+          });
+          document.getElementById("desc-price-rows").innerHTML = priceRowsHTML;
+
+          // Buttons
+          var waMsg =
+            "Hello Rockworx, I am interested in " +
+            product.name +
+            ". Please share more details and pricing.";
+          document.getElementById("btn-whatsapp").href =
+            "https://wa.me/919876543210?text=" + encodeURIComponent(waMsg);
+          document.getElementById("btn-enquire").href = "tel:+911234567890";
+
+          // Reviews
+          var reviews = product.reviews || [];
+          document.getElementById("review-count").textContent = reviews.length;
+          var html = "";
+          reviews.forEach(function (r) {
+            html += reviewCardHTML(r);
+          });
+          document.getElementById("reviews-container").innerHTML =
+            html || '<p class="text-muted">No reviews yet.</p>';
+
+          // Related products carousel
+          var carousel = document.getElementById("related-carousel");
+          var cardsHTML = "";
+          similar.forEach(function (p) {
+            cardsHTML += relatedCardHTML(p);
+          });
+          carousel.innerHTML = cardsHTML;
+
+          var $c = jQuery(carousel);
+          if ($c.hasClass("owl-loaded")) $c.trigger("destroy.owl.carousel");
+          $c.owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            margin: 25,
+            loop: similar.length > 3,
+            dots: false,
+            nav: true,
+            navText: [
+              '<i class="bi bi-chevron-left"></i>',
+              '<i class="bi bi-chevron-right"></i>',
+            ],
+            responsive: {
+              0: { items: 1 },
+              576: { items: 1 },
+              768: { items: 2 },
+              992: { items: 3 },
+              1200: { items: 4 },
+            },
+          });
+        }
+
+        /* ── Boot ─────────────────────────────────────────────────── */
+
+        function boot() {
+          var all = window.PRODUCTS && window.PRODUCTS.products;
+          if (!all || !all.length) {
+            console.error(
+              "products-data.js not loaded or PRODUCTS.products is empty.",
+            );
+            return;
+          }
+
+          var id = getParam("product") || all[0].id;
+          var product = null;
+          for (var i = 0; i < all.length; i++) {
+            if (all[i].id === id) {
+              product = all[i];
+              break;
+            }
+          }
+
+          if (!product) {
+            document.querySelector(".container-fluid.py-5").innerHTML =
+              '<div class="container py-5 text-center">' +
+              '<h3 class="mb-3">Product not found</h3>' +
+              '<a href="index.html" class="btn btn-primary">Back to Home</a>' +
+              "</div>";
+            return;
+          }
+
+          render(product, all);
+        }
+
+        window.addEventListener("load", boot);
+      })();
+    </script>
+  </body>
+</html>
