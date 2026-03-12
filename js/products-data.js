@@ -1961,7 +1961,7 @@ window.PRODUCTS = {
         "img/handicraft/wall-cladding.jpg",
         // additional wall cladding images, if available
       ],
-      price: { per_sqft: 40 },
+      price: { piece: 40 },
       normal_price: 40,
       short_description: "Decorative stone tiles for modern wall cladding.",
       long_description:
