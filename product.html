@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Product Detail - Rockworx</title>
+    <title>Product Detail - Royalrocx</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
@@ -58,7 +58,9 @@
       /* Product gallery carousel — matches main image aspect ratio */
       #product-gallery {
         aspect-ratio: 1 / 1;
-        overflow: hidden;
+        /* allow nav buttons to overlay without being clipped */
+        overflow: visible;
+        position: relative;
       }
       #product-gallery .item {
         aspect-ratio: 1 / 1;
@@ -69,6 +71,30 @@
         height: 100%;
         object-fit: cover;
         display: block;
+      }
+      /* arrows overlay for gallery */
+      #product-gallery .owl-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+      #product-gallery .owl-nav .owl-prev,
+      #product-gallery .owl-nav .owl-next {
+        pointer-events: auto;
+        background: rgba(0,0,0,0.3);
+        color: #fff;
+        border-radius: 50%;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+      }
+      #product-gallery .owl-nav .owl-prev:hover,
+      #product-gallery .owl-nav .owl-next:hover {
+        background: rgba(0,0,0,0.5);
       }
 
       /* Fix 2: Related carousel — all images same fixed height */
@@ -118,7 +144,7 @@
           </div>
           <div class="top-link pe-2">
             <a
-              href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+              href="https://wa.me/918905558885?text=Hello%20Royalrocx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
               target="_blank"
               class="text-white"
             >
@@ -133,7 +159,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
           <a href="index.html" class="navbar-brand">
-            <h2 class="mb-0 fw-bold" style="color: #2e2e2e">Rockworx</h2>
+            <h2 class="mb-0 fw-bold" style="color: #2e2e2e">Royalrocx</h2>
           </a>
           <button
             class="navbar-toggler border-0"
@@ -354,12 +380,12 @@
           Let's Build Something Timeless
         </h2>
         <p class="rw-text-light mb-4" style="max-width: 700px; margin: auto">
-          From luxury residences to large-scale commercial projects, Rockworx
+          From luxury residences to large-scale commercial projects, Royalrocx
           delivers precision-crafted natural stone solutions tailored to your
           architectural vision.
         </p>
         <a
-          href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+          href="https://wa.me/918905558885?text=Hello%20Royalrocx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
           target="_blank"
           class="btn rw-btn-gold-outline rounded-pill px-5 py-3"
         >
@@ -376,7 +402,7 @@
           style="border-color: rgba(198, 167, 94, 0.3) !important"
         >
           <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
-            <h2 class="rw-text-gold mb-1">Rockworx</h2>
+            <h2 class="rw-text-gold mb-1">Royalrocx</h2>
             <p class="rw-text-light mb-0">Premium Natural Stone Solutions</p>
           </div>
           <div class="col-lg-6 text-center text-lg-end">
@@ -406,7 +432,7 @@
         </div>
         <div class="row g-5">
           <div class="col-lg-4 col-md-6">
-            <h5 class="rw-text-white mb-3">About Rockworx</h5>
+            <h5 class="rw-text-white mb-3">About Royalrocx</h5>
             <p class="rw-text-light">
               We deliver premium granite, marble, and sandstone with precision
               fabrication, strict quality standards, and reliable international
@@ -437,10 +463,10 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6 text-center text-md-start rw-text-light">
-            © 2026 Rockworx. All Rights Reserved.
+            © 2026 Royalrocx. All Rights Reserved.
           </div>
           <div class="col-md-6 text-center text-md-end rw-text-light">
-            Designed & Developed by Rockworx Team
+            Designed & Developed by Royalrocx Team
           </div>
         </div>
       </div>
@@ -652,7 +678,7 @@
           var similar = getSimilarProducts(all, product, 6);
 
           // Page title
-          document.title = product.name + " | Rockworx";
+          document.title = product.name + " | Royalrocx";
 
           // Image / gallery handling
           var imgEl = document.getElementById("product-img");
@@ -674,13 +700,11 @@
             var html = "";
             sources.forEach(function (src) {
               html +=
-                '<div class="item"><a href="' +
-                src +
-                '" target="_blank"><img src="' +
+                '<div class="item"><img src="' +
                 src +
                 '" class="img-fluid w-100" alt="' +
                 product.name +
-                '" onerror="this.onerror=null;this.src=\'img/placeholder.jpg\'"/></a></div>';
+                '" onerror="this.onerror=null;this.src=\'img/placeholder.jpg\'"/></div>';
             });
             galleryEl.innerHTML = html;
             galleryEl.classList.remove("d-none");
@@ -694,10 +718,16 @@
               smartSpeed: 600,
               dots: true,
               nav: true,
+              touchDrag: true,
+              mouseDrag: true,
               navText: [
                 '<i class="bi bi-chevron-left"></i>',
                 '<i class="bi bi-chevron-right"></i>',
               ],
+              onInitialized: function() {
+                // ensure arrows are visible on top of images
+                $g.closest('#product-gallery').css('overflow','visible');
+              }
             });
           } else if (sources.length === 1) {
             // single image
@@ -706,7 +736,6 @@
             imgEl.onerror = function () {
               this.src = "img/placeholder.jpg";
             };
-            linkEl.href = sources[0];
             galleryEl.classList.add("d-none");
             linkEl.style.display = "block";
           } else {
@@ -776,7 +805,7 @@
 
           // Buttons
           var waMsg =
-            "Hello Rockworx, I am interested in " +
+            "Hello Royalrocx, I am interested in " +
             product.name +
             ". Please share more details and pricing.";
           document.getElementById("btn-whatsapp").href =
