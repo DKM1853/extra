@@ -43,7 +43,28 @@
         overflow: hidden;
         border-radius: 4px;
       }
+      #product-img-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
       #product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      /* Product gallery carousel — matches main image aspect ratio */
+      #product-gallery {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+      #product-gallery .item {
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+      #product-gallery img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -83,26 +104,26 @@
             <small class="me-3">
               <i class="fas fa-map-marker-alt me-2 text-secondary"></i>
               <a
-                href="https://maps.app.goo.gl/jSsfCeEApox5uDgH6"
+                href="https://maps.app.goo.gl/h1ge3oAFVg8EZdvR7"
                 target="_blank"
                 class="text-white"
               >
-                Plot no 15,16, Harmada Rd, Rajasthan 305801
+                RICCO Industrial Area, Kishangarh, Rajasthan 305801
               </a>
             </small>
             <small class="me-3">
               <i class="fas fa-envelope me-2 text-secondary"></i>
-              <a href="#" class="text-white">Email@Example.com</a>
+              <a href="#" class="text-white">Mayankrajmarbleind@gmail.com</a>
             </small>
           </div>
           <div class="top-link pe-2">
             <a
-              href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+              href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
               target="_blank"
               class="text-white"
             >
               <small class="text-white mx-2"
-                >Bulk Order Direct Whatsapp: 12345678890</small
+                >Bulk Order Direct Whatsapp: 8905558885</small
               >
             </a>
           </div>
@@ -164,6 +185,8 @@
                   <a href="#" id="product-img-link">
                     <img id="product-img" src="" alt="" />
                   </a>
+                  <!-- gallery for handicraft items; initialized dynamically -->
+                  <div id="product-gallery" class="owl-carousel d-none"></div>
                 </div>
               </div>
 
@@ -269,6 +292,11 @@
 
                           <!-- Dynamic price rows injected here -->
                           <div id="desc-price-rows"></div>
+                          <!-- Optional note for tiered pricing -->
+                          <div
+                            id="desc-price-note"
+                            class="text-center mt-2 fw-bold"
+                          ></div>
 
                           <div
                             class="row bg-light text-center align-items-center justify-content-center py-2"
@@ -331,7 +359,7 @@
           architectural vision.
         </p>
         <a
-          href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+          href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
           target="_blank"
           class="btn rw-btn-gold-outline rounded-pill px-5 py-3"
         >
@@ -353,24 +381,24 @@
           </div>
           <div class="col-lg-6 text-center text-lg-end">
             <div class="d-inline-flex gap-3">
-              <a
+              <!-- <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
                 href=""
                 ><i class="fab fa-twitter"></i
-              ></a>
+              ></a> -->
               <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                href=""
+                href="https://www.facebook.com/share/18JWSUZ5WM/"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a
+              <!-- <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
                 href=""
                 ><i class="fab fa-youtube"></i
-              ></a>
+              ></a> -->
               <a
                 class="btn btn-outline-secondary btn-md-square rounded-circle"
-                href=""
+                href="https://www.instagram.com/royalrocx?igsh=cnRrb2g5MDR1ajVm"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
@@ -395,10 +423,10 @@
           <div class="col-lg-4 col-md-12">
             <h5 class="rw-text-white mb-3">Contact Info</h5>
             <p class="rw-text-light mb-1">
-              Plot no 15,16, Harmada Rd, Rajasthan 305801
+              RICCO Industrial Area, Kishangarh, Rajasthan 305801
             </p>
-            <p class="rw-text-light mb-1">info@rockworx.com</p>
-            <p class="rw-text-light">+91 12345 67890</p>
+            <p class="rw-text-light mb-1">Mayankrajmarbleind@gmail.com</p>
+            <p class="rw-text-light">+91 8905558885</p>
           </div>
         </div>
       </div>
@@ -448,23 +476,37 @@
          * Returns ALL non-empty price entries as an array of { label, value }
          * Skips any key whose value is null, undefined, 0, or empty string.
          */
-        function parsePriceEntries(priceObj) {
+        function parsePriceEntries(priceObj, category) {
           var unitMap = {
-            per_sqft: "Per Sq.Ft",
+            per_sqft:
+              category === "granite" || category === "cobblestones"
+                ? "Per Sq.Ft"
+                : "Per Sq.Ft",
             piece: "Per Piece",
             "1kg": "Per 1 Kg",
             "500g": "Per 500g",
             per_ton: "Per Ton",
           };
           var result = [];
-          Object.entries(priceObj).forEach(function (entry) {
+          Object.entries(priceObj || {}).forEach(function (entry) {
             var key = entry[0];
             var val = entry[1];
             // Skip if empty / null / 0
             if (val === null || val === undefined || val === "" || val === 0)
               return;
+            var label = unitMap[key] || key;
+            // add kg unit for numeric ranges (e.g. 0-49)
+            if (/^[0-9]+-[0-9]+$/.test(key)) {
+              label = key + " kg";
+            }
+            // handicraft prices that are not per_sqft should be treated as starting
+            // prices — append ' onwards' so callers can prefix ₹ and display clearly
+            if (category === "handicraft" && key !== "per_sqft") {
+              // preserve numeric value and append text
+              val = String(val) + " onwards";
+            }
             result.push({
-              label: key,
+              label: label,
               value: val,
             });
           });
@@ -472,8 +514,8 @@
         }
 
         /** First price entry — used in the header price display */
-        function parseFirstPrice(priceObj) {
-          var entries = parsePriceEntries(priceObj);
+        function parseFirstPrice(priceObj, category) {
+          var entries = parsePriceEntries(priceObj, category);
           return entries.length ? entries[0] : { label: "", value: 0 };
         }
 
@@ -560,7 +602,7 @@
          * The CSS rule in <style> handles the sizing; no inline styles needed here.
          */
         function relatedCardHTML(p) {
-          var firstPrice = parseFirstPrice(p.price);
+          var firstPrice = parseFirstPrice(p.price, p.category);
           var link = "product.html?product=" + encodeURIComponent(p.id);
           return (
             '<div class="border border-primary rounded position-relative vesitable-item">' +
@@ -602,7 +644,7 @@
         /* ── Render ───────────────────────────────────────────────── */
 
         function render(product, all) {
-          var priceEntries = parsePriceEntries(product.price);
+          var priceEntries = parsePriceEntries(product.price, product.category);
           var firstPrice = priceEntries.length
             ? priceEntries[0]
             : { label: "", value: "" };
@@ -612,14 +654,66 @@
           // Page title
           document.title = product.name + " | Rockworx";
 
-          // Image — object-fit:cover applied via CSS
-          var img = document.getElementById("product-img");
-          img.src = product.image_url;
-          img.alt = product.name;
-          img.onerror = function () {
-            this.src = "img/placeholder.jpg";
-          };
-          document.getElementById("product-img-link").href = product.image_url;
+          // Image / gallery handling
+          var imgEl = document.getElementById("product-img");
+          var linkEl = document.getElementById("product-img-link");
+          var galleryEl = document.getElementById("product-gallery");
+          // determine source list
+          var sources = [];
+          if (
+            product.category === "handicraft" &&
+            Array.isArray(product.images) &&
+            product.images.length
+          ) {
+            sources = product.images.slice();
+          } else if (product.image_url) {
+            sources = [product.image_url];
+          }
+          if (sources.length > 1) {
+            // populate carousel
+            var html = "";
+            sources.forEach(function (src) {
+              html +=
+                '<div class="item"><a href="' +
+                src +
+                '" target="_blank"><img src="' +
+                src +
+                '" class="img-fluid w-100" alt="' +
+                product.name +
+                '" onerror="this.onerror=null;this.src=\'img/placeholder.jpg\'"/></a></div>';
+            });
+            galleryEl.innerHTML = html;
+            galleryEl.classList.remove("d-none");
+            linkEl.style.display = "none";
+            // initialize carousel
+            var $g = jQuery(galleryEl);
+            if ($g.hasClass("owl-loaded")) $g.trigger("destroy.owl.carousel");
+            $g.owlCarousel({
+              items: 1,
+              autoplay: true,
+              smartSpeed: 600,
+              dots: true,
+              nav: true,
+              navText: [
+                '<i class="bi bi-chevron-left"></i>',
+                '<i class="bi bi-chevron-right"></i>',
+              ],
+            });
+          } else if (sources.length === 1) {
+            // single image
+            imgEl.src = sources[0];
+            imgEl.alt = product.name;
+            imgEl.onerror = function () {
+              this.src = "img/placeholder.jpg";
+            };
+            linkEl.href = sources[0];
+            galleryEl.classList.add("d-none");
+            linkEl.style.display = "block";
+          } else {
+            // no image at all
+            imgEl.src = "img/placeholder.jpg";
+            linkEl.href = "#";
+          }
 
           // Name / category
           document.getElementById("product-name").textContent = product.name;
@@ -628,8 +722,12 @@
           );
 
           // First price shown in header
-          document.getElementById("product-price").textContent =
-            firstPrice.value ? "₹" + firstPrice.value : "";
+          var priceText = firstPrice.value
+            ? firstPrice.label.includes("₹")
+              ? firstPrice.value
+              : "₹" + firstPrice.value
+            : "";
+          document.getElementById("product-price").textContent = priceText;
           document.getElementById("product-price-unit").textContent =
             firstPrice.label;
 
@@ -653,6 +751,9 @@
           var priceRowsHTML = "";
           priceEntries.forEach(function (entry, idx) {
             var bg = idx % 2 === 0 ? "" : "bg-light"; // alternate shade
+            var valueDisplay = entry.label.includes("₹")
+              ? entry.value
+              : "₹" + entry.value;
             priceRowsHTML +=
               '<div class="row ' +
               bg +
@@ -660,12 +761,18 @@
               '<div class="col-6"><p class="mb-0">' +
               entry.label +
               "</p></div>" +
-              '<div class="col-6"><p class="mb-0">₹' +
-              entry.value +
+              '<div class="col-6"><p class="mb-0">' +
+              valueDisplay +
               "</p></div>" +
               "</div>";
           });
           document.getElementById("desc-price-rows").innerHTML = priceRowsHTML;
+          if (product.category === "pebbles") {
+            document.getElementById("desc-price-note").textContent =
+              "Bulk order rates accordingly";
+          } else {
+            document.getElementById("desc-price-note").textContent = "";
+          }
 
           // Buttons
           var waMsg =
@@ -673,8 +780,8 @@
             product.name +
             ". Please share more details and pricing.";
           document.getElementById("btn-whatsapp").href =
-            "https://wa.me/919876543210?text=" + encodeURIComponent(waMsg);
-          document.getElementById("btn-enquire").href = "tel:+911234567890";
+            "https://wa.me/918905558885?text=" + encodeURIComponent(waMsg);
+          document.getElementById("btn-enquire").href = "tel:+918905558885";
 
           // Reviews
           var reviews = product.reviews || [];

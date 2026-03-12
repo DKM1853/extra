@@ -45,6 +45,21 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+
+    <!-- Product Listing Image Styling -->
+    <style>
+      .fruite-item .fruite-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+      }
+      .fruite-item .fruite-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
   </head>
 
   <body>
@@ -66,25 +81,25 @@
             <small class="me-3">
               <i class="fas fa-map-marker-alt me-2 text-secondary"></i>
               <a
-                href="https://maps.app.goo.gl/jSsfCeEApox5uDgH6"
+                href="https://maps.app.goo.gl/h1ge3oAFVg8EZdvR7"
                 target="_blank"
                 class="text-white"
               >
-                Plot no 15,16, Harmada Rd, Rajasthan 305801
+                RICCO Industrial Area, Kishangarh, Rajasthan 305801
               </a>
             </small>
             <small class="me-3"
               ><i class="fas fa-envelope me-2 text-secondary"></i
-              ><a href="#" class="text-white">Email@Example.com</a></small
+              ><a href="#" class="text-white">Mayankrajmarbleind@gmail.com</a></small
             >
           </div>
           <div class="top-link pe-2">
             <a
-              href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+              href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
               target="_blank"
               class="text-white"
               ><small class="text-white mx-2"
-                >Bulk Order Direct Whatsapp: 12345678890</small
+                >Bulk Order Direct Whatsapp: 8905558885</small
               ></a
             >
           </div>
@@ -127,7 +142,9 @@
                 </a>
                 <div class="dropdown-menu rounded-0 shadow-sm">
                   <a href="granite.html" class="dropdown-item">Granite</a>
-                  <a href="pebbles.html" class="dropdown-item active">Pebbles</a>
+                  <a href="pebbles.html" class="dropdown-item active"
+                    >Pebbles</a
+                  >
                   <a href="cobblestones.html" class="dropdown-item"
                     >Cobblestones</a
                   >
@@ -149,9 +166,7 @@
       <div class="container py-5">
         <div class="row mb-4">
           <div class="col-12 text-center">
-            <h2 id="pebbles-title" class="mb-0">
-              Pebbles Collection
-            </h2>
+            <h2 id="pebbles-title" class="mb-0">Pebbles Collection</h2>
           </div>
         </div>
 
@@ -175,7 +190,7 @@
         </p>
 
         <a
-          href="https://wa.me/919876543210?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
+          href="https://wa.me/918905558885?text=Hello%20Rockworx,%20I%20would%20like%20to%20request%20a%20quote%20for%20your%20stone%20products."
           target="_blank"
           class="rw-btn-gold-outline rounded-pill px-5 py-3"
         >
@@ -200,24 +215,24 @@
 
           <div class="col-lg-6 text-center text-lg-end">
             <div class="d-inline-flex gap-3">
-              <a
+              <!-- <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
                 href=""
                 ><i class="fab fa-twitter"></i
-              ></a>
+              ></a> -->
               <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                href=""
+                href="https://www.facebook.com/share/18JWSUZ5WM/"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a
+              <!-- <a
                 class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
                 href=""
                 ><i class="fab fa-youtube"></i
-              ></a>
+              ></a> -->
               <a
                 class="btn btn-outline-secondary btn-md-square rounded-circle"
-                href=""
+                href="https://www.instagram.com/royalrocx?igsh=cnRrb2g5MDR1ajVm"
                 ><i class="fab fa-linkedin-in"></i
               ></a>
             </div>
@@ -246,10 +261,10 @@
           <div class="col-lg-4 col-md-12">
             <h5 class="rw-text-white mb-3">Contact Info</h5>
             <p class="rw-text-light mb-1">
-              Plot no 15,16, Harmada Rd, Rajasthan 305801
+              RICCO Industrial Area, Kishangarh, Rajasthan 305801
             </p>
-            <p class="rw-text-light mb-1">info@rockworx.com</p>
-            <p class="rw-text-light">+91 12345 67890</p>
+            <p class="rw-text-light mb-1">Mayankrajmarbleind@gmail.com</p>
+            <p class="rw-text-light">+91 8905558885</p>
           </div>
         </div>
       </div>
@@ -291,15 +306,41 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const grid = document.getElementById("product-grid");
-        const heading = document.getElementById("granite-title");
+        const heading = document.getElementById("pebbles-title");
 
         function escapeHtml(str) {
           return String(str || "")
             .replace(/&/g, "&amp;")
             .replace(/</g, "&lt;")
             .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
+            .replace(/\"/g, "&quot;")
             .replace(/'/g, "&#39;");
+        }
+
+        function parsePriceEntries(priceObj, category) {
+          var unitMap = {
+            per_sqft:
+              category === "granite" || category === "cobblestones"
+                ? "₹/sqft"
+                : "Per Sq.Ft",
+            piece: "Per Piece",
+            "1kg": "Per 1 Kg",
+            "500g": "Per 500g",
+            per_ton: "Per Ton",
+          };
+          var result = [];
+          Object.entries(priceObj || {}).forEach(function (entry) {
+            var key = entry[0];
+            var val = entry[1];
+            if (val === null || val === undefined || val === "" || val === 0)
+              return;
+            var label = unitMap[key] || key;
+            if (/^[0-9]+-[0-9]+$/.test(key)) {
+              label = key + " kg";
+            }
+            result.push({ label: label, value: val });
+          });
+          return result;
         }
 
         function renderFromData(data) {
@@ -321,12 +362,20 @@
           grid.innerHTML = products
             .map(function (p) {
               var img = p.image_url || p.image || "img/about-factory.jpg";
-              var price =
-                p.price && p.price.per_sqft
-                  ? "₹" + p.price.per_sqft + "/sqft"
-                  : p.normal_price
-                    ? "₹" + p.normal_price
-                    : "";
+              var price = "";
+              if (p.price) {
+                var entries = parsePriceEntries(p.price, p.category);
+                if (entries.length) {
+                  price = entries
+                    .map(function (e) {
+                      return "₹" + e.value + (e.label ? " " + e.label : "");
+                    })
+                    .join(", ");
+                }
+              }
+              if (!price && p.normal_price) {
+                price = "₹" + p.normal_price;
+              }
               return (
                 '\n<div class="col-md-6 col-lg-4 col-xl-4">\n  <div class="rounded position-relative fruite-item">\n    <div class="fruite-img">\n      <img src="' +
                 img +

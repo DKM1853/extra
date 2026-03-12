@@ -5,7 +5,7 @@ window.PRODUCTS = {
       name: "Markino Brown Granite",
       category: "granite",
       image_url: "img/granite/markino-brown.jpg",
-      price: { per_sqft: 220 },
+      price: { per_sqft: 45 },
       normal_price: 260,
       short_description:
         "Premium brown granite widely used for flooring, countertops and wall cladding.",
@@ -46,9 +46,8 @@ window.PRODUCTS = {
       id: "markino-black",
       name: "Markino Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/markino-black-granite.jpg",
-      price: { per_sqft: 230 },
+      image_url: "img/granite/markino-black-granite.jpg",
+      price: { per_sqft: 45 },
       normal_price: 270,
       short_description:
         "High quality black granite ideal for premium architectural projects.",
@@ -89,9 +88,8 @@ window.PRODUCTS = {
       id: "ice-white",
       name: "Ice White Granite",
       category: "granite",
-      image_url:
-        "img/granite/ice-white.jpg",
-      price: { per_sqft: 240 },
+      image_url: "img/granite/ice-white.jpg",
+      price: { per_sqft: 49 },
       normal_price: 280,
       short_description: "Elegant white granite perfect for modern interiors.",
       long_description:
@@ -132,9 +130,8 @@ window.PRODUCTS = {
       id: "k-white",
       name: "K White Granite",
       category: "granite",
-      image_url:
-        "img/granite/cotton-white-granite.jpg",
-      price: { per_sqft: 245 },
+      image_url: "img/granite/k-white-granite.jpg",
+      price: { per_sqft: 55 },
       normal_price: 285,
       short_description:
         "Classic white granite with fine grain texture, ideal for flooring and countertops.",
@@ -176,9 +173,8 @@ window.PRODUCTS = {
       id: "blue-dunes",
       name: "Blue Dunes Granite",
       category: "granite",
-      image_url:
-        "img/granite/blue-dunes-granite.jpg",
-      price: { per_sqft: 260 },
+      image_url: "img/granite/blue-dunes-granite.jpg",
+      price: { per_sqft: 90 },
       normal_price: 300,
       short_description: "Unique patterned granite ideal for premium spaces.",
       long_description:
@@ -220,9 +216,8 @@ window.PRODUCTS = {
       id: "viscon-white",
       name: "Viscon White Granite",
       category: "granite",
-      image_url:
-        "img/granite/viscon-white-granite.jpg",
-      price: { per_sqft: 250 },
+      image_url: "img/granite/viscon-white-granite.jpg",
+      price: { per_sqft: 75 },
       normal_price: 290,
       short_description: "Beautiful white granite with black patterns.",
       long_description:
@@ -263,9 +258,8 @@ window.PRODUCTS = {
       id: "misty-white",
       name: "Misty White Granite",
       category: "granite",
-      image_url:
-        "img/granite/misty-white.jpg",
-      price: { per_sqft: 240 },
+      image_url: "img/granite/misty-white.jpg",
+      price: { per_sqft: 80 },
       normal_price: 280,
       short_description: "Stylish white granite ideal for modern architecture.",
       long_description:
@@ -305,9 +299,8 @@ window.PRODUCTS = {
       id: "p-white",
       name: "P White Granite",
       category: "granite",
-      image_url:
-        "img/granite/p-white-granite.jpg",
-      price: { per_sqft: 235 },
+      image_url: "img/granite/p-white-granite.jpg",
+      price: { per_sqft: 40 },
       normal_price: 275,
       short_description:
         "Popular white granite with subtle grey veining for elegant interiors.",
@@ -348,9 +341,8 @@ window.PRODUCTS = {
       id: "jirawal-white",
       name: "Jirawal White Granite",
       category: "granite",
-      image_url:
-        "img/granite/jirawal-white-granite.jpg",
-      price: { per_sqft: 230 },
+      image_url: "img/granite/jirawal-white-granite.jpg",
+      price: { per_sqft: 80 },
       normal_price: 270,
       short_description:
         "Natural white granite from Rajasthan with fine crystal texture.",
@@ -390,9 +382,8 @@ window.PRODUCTS = {
       id: "china-white",
       name: "China White Granite",
       category: "granite",
-      image_url:
-        "img/granite/china-white-granite.jpg",
-      price: { per_sqft: 255 },
+      image_url: "img/granite/china-white-granite.jpg",
+      price: { per_sqft: 75 },
       normal_price: 295,
       short_description:
         "Premium imported white granite with a lustrous polished surface.",
@@ -436,9 +427,8 @@ window.PRODUCTS = {
       id: "rozy-pink",
       name: "Rozy Pink Granite",
       category: "granite",
-      image_url:
-        "img/granite/rozy-pink.jpg",
-      price: { per_sqft: 225 },
+      image_url: "img/granite/rozy-pink.jpg",
+      price: { per_sqft: 50 },
       normal_price: 265,
       short_description:
         "Beautiful pink granite adding warmth to any interior space.",
@@ -480,9 +470,8 @@ window.PRODUCTS = {
       id: "chima-pink",
       name: "Chima Pink Granite",
       category: "granite",
-      image_url:
-        "img/granite/chima-pink-granite.jpg",
-      price: { per_sqft: 230 },
+      image_url: "img/granite/chima-pink-granite.jpg",
+      price: { per_sqft: 50 },
       normal_price: 270,
       short_description:
         "Distinctive pink granite with rich texture for premium interiors.",
@@ -524,9 +513,8 @@ window.PRODUCTS = {
       id: "furfury-red",
       name: "FurFury Red Granite",
       category: "granite",
-      image_url:
-        "img/granite/furfury-red.jpg",
-      price: { per_sqft: 240 },
+      image_url: "img/granite/furfury-red.jpg",
+      price: { per_sqft: 60 },
       normal_price: 280,
       short_description:
         "Bold red granite with high durability for striking interiors.",
@@ -569,9 +557,8 @@ window.PRODUCTS = {
       id: "k-red",
       name: "K Red Granite",
       category: "granite",
-      image_url:
-        "img/granite/kharda-red-granite.jpg",
-      price: { per_sqft: 235 },
+      image_url: "img/granite/kharda-red-granite.jpg",
+      price: { per_sqft: 70 },
       normal_price: 275,
       short_description:
         "Classic red granite perfect for decorative and architectural use.",
@@ -614,9 +601,8 @@ window.PRODUCTS = {
       id: "lakha-red",
       name: "Lakha Red Granite",
       category: "granite",
-      image_url:
-        "img/granite/lakha-red-granite.jpg",
-      price: { per_sqft: 245 },
+      image_url: "img/granite/lakha-red-granite.jpg",
+      price: { per_sqft: 170 },
       normal_price: 285,
       short_description:
         "Premium deep red granite widely used for luxury spaces.",
@@ -657,9 +643,8 @@ window.PRODUCTS = {
       id: "gem-red",
       name: "Gem Red Granite",
       category: "granite",
-      image_url:
-        "img/granite/gem-red.jpg",
-      price: { per_sqft: 250 },
+      image_url: "img/granite/gem-red.jpg",
+      price: { per_sqft: 95 },
       normal_price: 290,
       short_description: "Rich red granite with gem-like crystal patterns.",
       long_description:
@@ -700,9 +685,8 @@ window.PRODUCTS = {
       id: "tiger-skin",
       name: "Tiger Skin Granite",
       category: "granite",
-      image_url:
-        "img/granite/tiger-skin-granite.jpg",
-      price: { per_sqft: 270 },
+      image_url: "img/granite/tiger-skin-granite.jpg",
+      price: { per_sqft: 52 },
       normal_price: 310,
       short_description:
         "Exotic patterned granite with tiger-like skin markings.",
@@ -744,9 +728,8 @@ window.PRODUCTS = {
       id: "ice-blue",
       name: "Ice Blue Granite",
       category: "granite",
-      image_url:
-        "img/granite/ice-blue.jpg",
-      price: { per_sqft: 265 },
+      image_url: "img/granite/ice-blue.jpg",
+      price: { per_sqft: 52 },
       normal_price: 305,
       short_description:
         "Rare blue-toned granite perfect for luxury architectural projects.",
@@ -788,9 +771,8 @@ window.PRODUCTS = {
       id: "ash-black",
       name: "Ash Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/ash-black-granite.jpg",
-      price: { per_sqft: 235 },
+      image_url: "img/granite/ash-black-granite.jpg",
+      price: { per_sqft: 60 },
       normal_price: 275,
       short_description:
         "Smooth ash-black granite with subtle grey highlights.",
@@ -832,9 +814,8 @@ window.PRODUCTS = {
       id: "forest-black",
       name: "Forest Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/forest-black-granite.jpg",
-      price: { per_sqft: 240 },
+      image_url: "img/granite/forest-black-granite.jpg",
+      price: { per_sqft: 50 },
       normal_price: 280,
       short_description:
         "Deep black granite with natural forest-like dark patterns.",
@@ -877,9 +858,8 @@ window.PRODUCTS = {
       id: "r-black-blue-dot",
       name: "R Black Granite (Blue Dot)",
       category: "granite",
-      image_url:
-        "img/granite/r-black-blue-dot-granite.jpg",
-      price: { per_sqft: 255 },
+      image_url: "img/granite/r-black-blue-dot-granite.jpg",
+      price: { per_sqft: 75 },
       normal_price: 295,
       short_description:
         "Unique black granite with distinctive blue dot mineral patterns.",
@@ -922,9 +902,8 @@ window.PRODUCTS = {
       id: "river-black",
       name: "River Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/river-black-granite.jpg",
-      price: { per_sqft: 245 },
+      image_url: "img/granite/river-black-granite.jpg",
+      price: { per_sqft: 45 },
       normal_price: 285,
       short_description:
         "Smooth polished black granite with silver and grey veining.",
@@ -967,9 +946,8 @@ window.PRODUCTS = {
       id: "z-black",
       name: "Z Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/z-black.jpg",
-      price: { per_sqft: 250 },
+      image_url: "img/granite/black.jpg",
+      price: { per_sqft: 150 },
       normal_price: 290,
       short_description:
         "Premium jet black granite with fine grain for luxury applications.",
@@ -1014,9 +992,8 @@ window.PRODUCTS = {
       id: "majestic-black",
       name: "Majestic Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/majestic-black-granite.jpg",
-      price: { per_sqft: 265 },
+      image_url: "img/granite/majestic-black-granite.jpg",
+      price: { per_sqft: 52 },
       normal_price: 305,
       short_description:
         "Majestic deep black granite for grand architectural projects.",
@@ -1062,9 +1039,8 @@ window.PRODUCTS = {
       id: "titanium-black",
       name: "Titanium Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/titanium-black-granite.jpg",
-      price: { per_sqft: 275 },
+      image_url: "img/granite/titanium-black-granite.jpg",
+      price: { per_sqft: 55 },
       normal_price: 315,
       short_description:
         "Extremely durable titanium-infused black granite for heavy-duty use.",
@@ -1108,9 +1084,8 @@ window.PRODUCTS = {
       id: "coin-black",
       name: "Coin Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/coin-black-granite.jpg",
-      price: { per_sqft: 245 },
+      image_url: "img/granite/coin-black-granite.jpg",
+      price: { per_sqft: 55 },
       normal_price: 285,
       short_description:
         "Polished black granite with round coin-like mineral formations.",
@@ -1152,9 +1127,8 @@ window.PRODUCTS = {
       id: "south-black",
       name: "South Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/south-black-granite.jpg",
-      price: { per_sqft: 240 },
+      image_url: "img/granite/black.jpg",
+      price: { per_sqft: 160 },
       normal_price: 280,
       short_description:
         "South Indian premium black granite known for its deep uniform color.",
@@ -1196,9 +1170,8 @@ window.PRODUCTS = {
       id: "galaxy-black",
       name: "Galaxy Black Granite",
       category: "granite",
-      image_url:
-        "img/granite/black-galaxy-granite.jpg",
-      price: { per_sqft: 280 },
+      image_url: "img/granite/black-galaxy-granite.jpg",
+      price: { per_sqft: 75 },
       normal_price: 320,
       short_description: "Luxury black granite with golden specks.",
       long_description:
@@ -1240,9 +1213,8 @@ window.PRODUCTS = {
       id: "apple-green",
       name: "Apple Green Granite",
       category: "granite",
-      image_url:
-        "img/granite/apple-green-granite.jpg",
-      price: { per_sqft: 210 },
+      image_url: "img/granite/apple-green-granite.jpg",
+      price: { per_sqft: 55 },
       normal_price: 250,
       short_description:
         "Natural green granite suitable for decorative construction.",
@@ -1284,9 +1256,8 @@ window.PRODUCTS = {
       id: "desert-green",
       name: "Desert Green Granite",
       category: "granite",
-      image_url:
-        "img/granite/desert-green-granite.jpg",
-      price: { per_sqft: 200 },
+      image_url: "img/granite/desert-green-granite.jpg",
+      price: { per_sqft: 55 },
       normal_price: 240,
       short_description: "Durable green granite used in flooring and cladding.",
       long_description:
@@ -1327,7 +1298,7 @@ window.PRODUCTS = {
       name: "White Pebble Stone",
       category: "pebbles",
       image_url: "img/pebbles/white-pebble.png",
-      price: { "1kg": 50, "500g": 25 },
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 70,
       short_description:
         "Premium decorative white pebbles for gardens and landscaping.",
@@ -1367,9 +1338,8 @@ window.PRODUCTS = {
       id: "rainbow-pebble",
       name: "Rainbow Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/rainbow-stone-pebbles.jpg",
-      price: { "1kg": 55, "500g": 30 },
+      image_url: "img/pebbles/rainbow-stone-pebbles.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 75,
       short_description:
         "Colorful decorative pebbles ideal for garden decoration.",
@@ -1410,9 +1380,8 @@ window.PRODUCTS = {
       id: "river-pebble",
       name: "Natural River Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/pebbles-banner.jpg",
-      price: { "1kg": 45, "500g": 25 },
+      image_url: "img/pebbles/pebbles-banner.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 65,
       short_description:
         "Smooth natural river stones for landscaping and decoration.",
@@ -1455,9 +1424,8 @@ window.PRODUCTS = {
       id: "kayampura-ash-grey",
       name: "Kayampura Ash Grey Pebble",
       category: "pebbles",
-      image_url:
-        "img/pebbles/Kayampura-ash.jpg",
-      price: { "1kg": 55, "500g": 30 },
+      image_url: "img/pebbles/Kayampura-ash.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 75,
       short_description:
         "Natural ash grey pebbles from Kayampura for elegant landscaping.",
@@ -1501,9 +1469,8 @@ window.PRODUCTS = {
       id: "teak-sandstone-pebble",
       name: "Teak Sandstone Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/teak-pebble.jpg",
-      price: { "1kg": 60, "500g": 32 },
+      image_url: "img/pebbles/teak-pebble.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 80,
       short_description:
         "Natural teak-toned sandstone pebbles for warm garden aesthetics.",
@@ -1546,9 +1513,8 @@ window.PRODUCTS = {
       id: "dholpur-red-pebble",
       name: "Dholpur Red Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/dholpur-red.jpg",
-      price: { "1kg": 58, "500g": 30 },
+      image_url: "img/pebbles/dholpur-red.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
       normal_price: 78,
       short_description:
         "Vibrant red Dholpur pebbles for bold landscaping designs.",
@@ -1588,12 +1554,101 @@ window.PRODUCTS = {
       ],
     },
     {
+      id: "dholpur-pink-pebble",
+      name: "Dholpur Pink Pebble Stone",
+      category: "pebbles",
+      image_url: "img/pebbles/dholpur-pink.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
+      normal_price: 80,
+      short_description:
+        "Soft pink Dholpur pebbles for romantic and elegant garden designs.",
+      long_description:
+        "Dholpur Pink pebbles are sourced from Rajasthan and feature a soft and warm pink hue. They are ideal for elegant garden designs, decorative pathways and romantic outdoor spaces.",
+      meta_title: "Dholpur Pink Pebble Stone",
+      meta_description:
+        "Natural Dholpur Pink pebble stones for elegant garden decoration.",
+      reviews: [
+        {
+          name: "Gauri Mehta",
+          rating: 5,
+          comment:
+            "Soft pink tones are so elegant. My garden looks absolutely beautiful.",
+        },
+        {
+          name: "Prakash Sharma",
+          rating: 4,
+          comment: "Lovely warm pink color from authentic Dholpur source.",
+        },
+        {
+          name: "Namrata Joshi",
+          rating: 5,
+          comment:
+            "Used for my courtyard decoration. The pink pebbles are charming.",
+        },
+        {
+          name: "Devendra Patil",
+          rating: 4,
+          comment: "Good quality pebbles with a beautiful warm pink shade.",
+        },
+        {
+          name: "Shraddha Rao",
+          rating: 5,
+          comment:
+            "Perfect for romantic garden designs. Very happy with the purchase.",
+        },
+      ],
+    },
+    {
+      id: "r-black-granite-pebble",
+      name: "R Black Granite Pebble Stone",
+      category: "pebbles",
+      image_url: "img/pebbles/r-black.jpg",
+      price: { "0-49": 30, "50-249": 25, "250-999": 20 },
+      normal_price: 85,
+      short_description:
+        "Premium black granite pebbles for modern and elegant landscaping.",
+      long_description:
+        "R Black Granite pebbles are sourced from premium black granite and offer a deep uniform black color. They are widely used for modern garden designs, water features and high-end landscaping.",
+      meta_title: "R Black Granite Pebble Stone",
+      meta_description:
+        "Premium R Black granite pebble stones for landscaping.",
+      reviews: [
+        {
+          name: "Sujay Kulkarni",
+          rating: 5,
+          comment: "Uniform deep black color. Perfect for modern landscaping.",
+        },
+        {
+          name: "Priya Nair",
+          rating: 4,
+          comment:
+            "Premium quality black granite pebbles. Very sleek and modern.",
+        },
+        {
+          name: "Aakash Sharma",
+          rating: 5,
+          comment:
+            "Used around my water feature. The black pebbles look very sophisticated.",
+        },
+        {
+          name: "Chetna Joshi",
+          rating: 4,
+          comment: "Good quality and consistent black color. Very satisfied.",
+        },
+        {
+          name: "Ramkrishna Pawar",
+          rating: 5,
+          comment:
+            "Best black pebbles I have found. Highly recommended for modern gardens.",
+        },
+      ],
+    },
+    {
       id: "white-polish-pebble",
       name: "White Polish Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/white-polished.jpg",
-      price: { "1kg": 65, "500g": 35 },
+      image_url: "img/pebbles/white-polished.jpg",
+      price: { "0-49": 60, "50-249": 55, "250-999": 50 },
       normal_price: 85,
       short_description:
         "Highly polished white pebbles with a mirror-like glossy finish.",
@@ -1635,9 +1690,8 @@ window.PRODUCTS = {
       id: "black-polish-pebble",
       name: "Black Polish Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/black-polished.jpg",
-      price: { "1kg": 65, "500g": 35 },
+      image_url: "img/pebbles/black-polished.jpg",
+      price: { "0-49": 70, "50-249": 65, "250-999": 60 },
       normal_price: 85,
       short_description:
         "Highly polished black pebbles for sophisticated decor and landscaping.",
@@ -1678,9 +1732,8 @@ window.PRODUCTS = {
       id: "onyx-polish-pebble",
       name: "Onyx Polish Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/onyx-polish.jpg",
-      price: { "1kg": 80, "500g": 42 },
+      image_url: "img/pebbles/onyx-polish.jpg",
+      price: { "0-49": 300, "50-249": 250, "250-999": 200 },
       normal_price: 100,
       short_description:
         "Luxurious onyx polished pebbles with translucent color variations.",
@@ -1725,9 +1778,8 @@ window.PRODUCTS = {
       id: "multicolor-polish-pebble",
       name: "Multi Color Polish Pebble Stone",
       category: "pebbles",
-      image_url:
-        "img/pebbles/multi-color.jpg",
-      price: { "1kg": 70, "500g": 38 },
+      image_url: "img/pebbles/multi-color.jpg",
+      price: { "0-49": 50, "50-249": 45, "250-999": 40 },
       normal_price: 90,
       short_description:
         "Vibrant polished multi-color pebbles for cheerful decorative spaces.",
@@ -1766,105 +1818,13 @@ window.PRODUCTS = {
         },
       ],
     },
-    {
-      id: "dholpur-pink-pebble",
-      name: "Dholpur Pink Pebble Stone",
-      category: "pebbles",
-      image_url:
-        "img/pebbles/dholpur-pink.jpg",
-      price: { "1kg": 60, "500g": 32 },
-      normal_price: 80,
-      short_description:
-        "Soft pink Dholpur pebbles for romantic and elegant garden designs.",
-      long_description:
-        "Dholpur Pink pebbles are sourced from Rajasthan and feature a soft and warm pink hue. They are ideal for elegant garden designs, decorative pathways and romantic outdoor spaces.",
-      meta_title: "Dholpur Pink Pebble Stone",
-      meta_description:
-        "Natural Dholpur Pink pebble stones for elegant garden decoration.",
-      reviews: [
-        {
-          name: "Gauri Mehta",
-          rating: 5,
-          comment:
-            "Soft pink tones are so elegant. My garden looks absolutely beautiful.",
-        },
-        {
-          name: "Prakash Sharma",
-          rating: 4,
-          comment: "Lovely warm pink color from authentic Dholpur source.",
-        },
-        {
-          name: "Namrata Joshi",
-          rating: 5,
-          comment:
-            "Used for my courtyard decoration. The pink pebbles are charming.",
-        },
-        {
-          name: "Devendra Patil",
-          rating: 4,
-          comment: "Good quality pebbles with a beautiful warm pink shade.",
-        },
-        {
-          name: "Shraddha Rao",
-          rating: 5,
-          comment:
-            "Perfect for romantic garden designs. Very happy with the purchase.",
-        },
-      ],
-    },
-    {
-      id: "r-black-granite-pebble",
-      name: "R Black Granite Pebble Stone",
-      category: "pebbles",
-      image_url:
-        "img/pebbles/r-black.jpg",
-      price: { "1kg": 65, "500g": 35 },
-      normal_price: 85,
-      short_description:
-        "Premium black granite pebbles for modern and elegant landscaping.",
-      long_description:
-        "R Black Granite pebbles are sourced from premium black granite and offer a deep uniform black color. They are widely used for modern garden designs, water features and high-end landscaping.",
-      meta_title: "R Black Granite Pebble Stone",
-      meta_description:
-        "Premium R Black granite pebble stones for landscaping.",
-      reviews: [
-        {
-          name: "Sujay Kulkarni",
-          rating: 5,
-          comment: "Uniform deep black color. Perfect for modern landscaping.",
-        },
-        {
-          name: "Priya Nair",
-          rating: 4,
-          comment:
-            "Premium quality black granite pebbles. Very sleek and modern.",
-        },
-        {
-          name: "Aakash Sharma",
-          rating: 5,
-          comment:
-            "Used around my water feature. The black pebbles look very sophisticated.",
-        },
-        {
-          name: "Chetna Joshi",
-          rating: 4,
-          comment: "Good quality and consistent black color. Very satisfied.",
-        },
-        {
-          name: "Ramkrishna Pawar",
-          rating: 5,
-          comment:
-            "Best black pebbles I have found. Highly recommended for modern gardens.",
-        },
-      ],
-    },
+
     {
       id: "granite-cobble",
       name: "Granite Cobble Stones",
       category: "cobblestones",
-      image_url:
-        "img/cobblestone/cobblestone-banner.jpg",
-      price: { per_sqft: 120, per_ton: 4000 },
+      image_url: "img/cobblestone/cobblestone-banner.jpg",
+      price: { per_sqft: 150 },
       normal_price: 150,
       short_description:
         "Durable cobblestones perfect for driveways and pavements.",
@@ -1905,10 +1865,9 @@ window.PRODUCTS = {
       id: "sandstone-cobble",
       name: "Sandstone Cobble Stones",
       category: "cobblestones",
-      image_url:
-        "img/cobblestone/sandstone-cobble.jpg",
-      price: { per_sqft: 110, per_ton: 3500 },
-      normal_price: 140,
+      image_url: "img/cobblestone/sandstone-cobble.jpg",
+      price: { per_sqft: 100 },
+      normal_price: 100,
       short_description: "Classic sandstone cobbles used for outdoor paving.",
       long_description:
         "Sandstone cobble stones provide a natural and traditional appearance suitable for pathways and gardens.",
@@ -1947,9 +1906,15 @@ window.PRODUCTS = {
       id: "tulsi-gamla",
       name: "Tulsi Gamla",
       category: "handicraft",
-      image_url:
+      image_url: "img/handicraft/tulsi-gamla.jpg",
+      // gallery support: multiple image URLs can be shown for handicraft items.
+      // front‑end will prefer `images` when present, falling back to image_url.
+      images: [
         "img/handicraft/tulsi-gamla.jpg",
-      price: { piece: 1200 },
+        "img/handicraft/wall-cladding.jpg",
+        // add more image paths here, e.g. "img/handicraft/tulsi-gamla-2.jpg"
+      ],
+      price: { piece: 1500 },
       normal_price: 1500,
       short_description: "Traditional handcrafted stone Tulsi planter.",
       long_description:
@@ -1991,10 +1956,13 @@ window.PRODUCTS = {
       id: "wall-cladding",
       name: "Wall Cladding Tile",
       category: "handicraft",
-      image_url:
+      image_url: "img/handicraft/wall-cladding.jpg",
+      images: [
         "img/handicraft/wall-cladding.jpg",
-      price: { per_sqft: 180 },
-      normal_price: 220,
+        // additional wall cladding images, if available
+      ],
+      price: { per_sqft: 40 },
+      normal_price: 40,
       short_description: "Decorative stone tiles for modern wall cladding.",
       long_description:
         "Wall cladding stone tiles provide elegant architectural finishes for interiors and exterior walls.",
@@ -2034,10 +2002,13 @@ window.PRODUCTS = {
       id: "stone-fountain",
       name: "Stone Fountain",
       category: "handicraft",
-      image_url:
+      image_url: "img/handicraft/fountain.jpg",
+      images: [
         "img/handicraft/fountain.jpg",
-      price: { piece: 8500 },
-      normal_price: 9500,
+        // more fountain views can be added here
+      ],
+      price: { piece: 9999 },
+      normal_price: 9999,
       short_description: "Beautiful handcrafted stone fountain for gardens.",
       long_description:
         "Stone fountains add elegance to gardens, hotels and outdoor spaces with natural flowing water aesthetics.",
